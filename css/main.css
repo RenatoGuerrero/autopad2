@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+/*Estilos globales para el texto*/
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/*Footer Fixed. Sorry pero me estaba dando un Tic verlo de esa manera XD*/
+#footer{
+    text-align: center; 
+    background-color: black; 
+    color: aliceblue;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    padding: 2%;
+    
+}
+/*Estilos Home*/
+header div h1{
+    text-align: center;
+}
+
+main div img{
+    width: 200px;
+    
+}
+nav ul{
+    text-align: center;
+    border: 3px solid black;
+    padding: 2%;
+    
+}
+nav ul li{
+    margin: 1px 0;
+    list-style: none;
+    
+}
+
+main div{
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+#main-info{
+    text-align: center;
+    font-weight: bold;
+}
+/*Estilos contacto*/
+input{
+    width: 92%;
+    padding: 1%;
+    margin: 1%;
+}
+label{
+    text-align: center;
+    
+}
+textarea{
+    width: 92%;
+    padding: 1%;
+    margin: 1%;
+}
+/*Centrado del boton "Enviar"*/
+form #submit{
+    width: 10%;
+    padding: 1% 1% 1% 1%;
+    margin: auto;
+    display: block;
+
+    
+}
+/*Estilos Nosotros*/
+section h2{
+    text-align: center;
+    padding-top: 2%;
+}
+section div img{
+    width: 200px;
+    height: 180px;
+
+}
+/*Alinear Vendedores al centro*/
+.img-container-nosotros{
+    text-align: center;
+    margin: 5%;
+    
+}
+div p{
+    text-align: center;
+}
+.img-container-nosotros a{
+    padding: 5%;
+}
+section{
+    margin-bottom: 10%;
+}
+.info{
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+    font-family: sans-serif;
+}
+/*div.main-menu-img{
+    background-image: url(../img/repuestos-accesorios.jpg.ximg_.l_12_h.smart_.webp);
+    padding: 10%;
+}*/
+
