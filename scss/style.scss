@@ -1,0 +1,264 @@
+// =======================
+// Variables
+// =======================
+$font-main: 'Oswald', sans-serif;
+$font-alt: sans-serif;
+
+$color-footer: #0602b1;
+$color-text-light: aliceblue;
+
+$spacing-sm: 1%;
+$spacing-md: 2%;
+$spacing-lg: 5%;
+
+$img-small: 200px;
+
+// =======================
+// Mixins
+// =======================
+@mixin center-text {
+  text-align: center;
+}
+
+@mixin img-size($width, $height: auto) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// =======================
+// Reset
+// =======================
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// =======================
+// Globales
+// =======================
+body {
+  font-family: $font-main;
+  font-weight: 400;
+  padding-top: 70px;
+  line-height: 1.5;
+}
+
+// =======================
+// Footer
+// =======================
+#footer {
+  @include center-text;
+  background-color: $color-footer;
+  color: $color-text-light;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: $spacing-md;
+}
+
+// =======================
+// Home
+// =======================
+header {
+  div {
+    h1 {
+      @include center-text;
+    }
+  }
+}
+
+main {
+  div {
+    @include center-text;
+    margin: 3rem 0;
+
+    img {
+      @include img-size($img-small);
+    }
+
+    h2 {
+      margin: $spacing-md;
+    }
+
+    p {
+      font-size: 1.5em;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+  }
+}
+
+#main-info {
+  @include center-text;
+  font-weight: bold;
+  font-size: 2em;
+  padding: $spacing-lg;
+}
+
+// =======================
+// Nosotros
+// =======================
+section {
+  margin-bottom: $spacing-sm;
+
+  h2 {
+    @include center-text;
+    padding-top: $spacing-sm;
+    text-transform: capitalize;
+  }
+
+  div {
+    img {
+      @include img-size(60%, 40%);
+    }
+  }
+}
+
+.img-container-nosotros {
+  @include center-text;
+  margin: $spacing-lg;
+
+  a {
+    padding: $spacing-lg;
+  }
+}
+
+.info {
+  @include center-text;
+  font-weight: bold;
+  font-size: larger;
+  font-family: $font-alt;
+}
+
+div {
+  p {
+    @include center-text;
+  }
+}
+
+// =======================
+// Carrusel
+// =======================
+.carousel {
+  margin: 100px auto;
+  width: 90%;
+  display: flex;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.card {
+  flex: 0 0 5em;
+  height: 5em;
+  font-size: 3rem;
+  border-radius: .2em;
+  @include center-text;
+  align-content: center;
+}
+
+.group {
+  @include flex-center;
+  gap: 1em;
+  animation: spin 10s infinite linear;
+  padding-right: 1em;
+}
+
+// =======================
+// Navbar
+// =======================
+.nav-link {
+  font-weight: bolder;
+}
+
+.navbar-brand,
+.navbar .nav-link {
+  font-family: $font-main !important;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+// =======================
+// Form
+// =======================
+form {
+  div {
+    margin: $spacing-md;
+  }
+
+  button {
+    @include center-text;
+  }
+}
+
+// =======================
+// Flexbox Nosotros
+// =======================
+.container-flexbox-nosotros {
+  display: flex;
+}
+
+.item-nosotros {
+  margin: $spacing-md;
+  padding: $spacing-md;
+
+  img {
+    @include img-size(70%, 60%);
+  }
+}
+
+// =======================
+// Animaciones
+// =======================
+@keyframes spin {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+// =======================
+// Media Queries
+// =======================
+@media (max-width: 420px) {
+  .navbar {
+    padding: 0.4rem 0.6rem;
+
+    h1 {
+      font-size: 1rem;
+      margin: 0;
+    }
+  }
+
+  .navbar-brand {
+    font-size: 0.9rem;
+    line-height: 1.1;
+    padding: 0;
+
+    img {
+      width: 35px;
+      height: auto;
+    }
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.5rem;
+  }
+
+  .navbar-toggler {
+    padding: 0.25rem 0.5rem;
+  }
+}
